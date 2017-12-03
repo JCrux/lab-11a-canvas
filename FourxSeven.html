@@ -1,0 +1,32 @@
+<body onload="draw()">
+<canvas id="sketch" width="800" height="800">
+</canvas>
+<script>
+function draw() {
+        
+        var sketch = document.getElementById('sketch');
+        var context = sketch.getContext("2d");
+        var StartX = 150;
+        var StartY = 100;
+        
+        for (var c = 0; c < 7; c = c + 1) {
+
+            for (var r = 0; r < 4; r = r + 1){
+
+                context.fillStyle = "#7f7fff";
+                context.beginPath();
+                context.arc(StartX, StartY, 50, 0, 2 * Math.PI, true);
+                context.closePath();
+                context.fill();
+
+            StartX +=100;
+    }
+
+    // resets the X Position so that it begins  every new colume
+    StartX = 150;
+    // increase the Y so that it starts a new row
+    StartY += 100;
+}
+}
+</script>
+</body>
