@@ -6,17 +6,19 @@ function draw() {
         
         var sketch = document.getElementById('sketch');
         var context = sketch.getContext("2d");
-        var StartY = 150;
+        var request = prompt("How many circles in a row do you want?");
+        var StartX = 150;
 
-for (var i = 0; i <5; i++) {
-    context.fillStyle = "#add8e6";
+for (var i = 0; i < request; i = i + 1) {
+    
+    context.fillStyle = "#9B30FF";
     context.beginPath();
-    context.arc(100, StartY, 50, 0, 2 * Math.PI, true);
+    context.arc(StartX, 80, 50, 0, 2 * Math.PI, true);
     context.closePath();
     context.fill();
 
     
-    StartY += 100;
+    StartX += 100;
 }
 }
 </script>
